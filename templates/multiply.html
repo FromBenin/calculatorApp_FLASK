@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Multiply Numbers</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='/css/main.css')}}">
+    </head>
+    <body>
+      <img src="https://raw.githubusercontent.com/MariyaSha/SimpleGreetingApp/main/logo.png">
+      <br>
+      <form action="/thanks" method="post">
+      {% for message in get_flashed_messages()%}
+        <p> {{message}} </p>
+      {% endfor %}
+        <br>
+        <input type="number" name="num1_input" placeholder="First Number">
+        <br>
+        <input type="number" name="num2_input" placeholder="Second Number">
+        <br>
+        <input type="submit" value="MULTIPLY" id="multiply">
+        <br>
+      {% for message in get_flashed_messages()%}
+        <p> Developed by Nosa </p>
+      {% endfor %}
+      </form>
+    </body>
+</html>

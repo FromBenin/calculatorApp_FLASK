@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add Numbers</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='/css/main.css')}}">
+    </head>
+    <body>
+      <img src="https://raw.githubusercontent.com/MariyaSha/SimpleGreetingApp/main/logo.png">
+      <br>
+      <form action="/subtract" method="post">
+      {% for message in get_flashed_messages()%}
+        <p> {{message}} </p>
+      {% endfor %}
+        <br>
+        <input type="number" name="num1_input" placeholder="1st Number">
+        <br>
+        <input type="number" name="num2_input" placeholder="2nd Number">
+        <br>
+        <input type="submit" value="ADD" id="add">
+        <br>
+      {% for message in get_flashed_messages()%}
+        <p> Developed by Nosa </p>
+      {% endfor %}
+      </form>
+    </body>
+</html>
